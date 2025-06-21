@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+                       
+\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt} %%% Test various topsep values to fix vertical spacing errors
+
+% resume starts here
+\begin{document}
+
+% name
+\centerline{\Huge Jose Esteban Garcia}
+
+\vspace{5pt}
+
+% contact information
+\centerline{\href{mailto:jemg1210@gmail.com}{jemg1210@gmail.com} | \href{https://www.j3g.dev}{www.j3g.dev} | \href{https://github.com/josematute}{github.com/josematute}}
+
+\vspace{-10pt}
+
+% skills section
+\section*{Skills}
+\textbf{Programming Languages:} TypeScript, JavaScript, SQL, Dart, Python \\
+\textbf{Frontend:} React, Next.js, Flutter, Tailwind CSS \\
+\textbf{Backend:} Node.js, Express, Supabase, PostgreSQL, Prisma, Salesforce \\
+\textbf{APIs \& Auth:} REST, GraphQL, JWT, OpenAI API, Gemini API, SOQL \\
+\textbf{Tools \& DevOps:} Git, Docker, CI/CD, TSOA, Swagger, Vercel \\
+\textbf{Languages:} English, Spanish
+
+\vspace{-6.5pt}
+
+% experience section
+\section*{Experience}
+\textbf{Software Engineer,} VIUS Built -- Salt Lake City, UT \hfill Feb 2024 -- May 2025 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Built a construction management platform with Next.js, supporting project estimation, bid tracking, and subcontractor workflows
+  \item Developed Dockerized backend services using Express and Supabase (Postgres, RPCs, RLS) to manage compliance, including W-9s and insurance validation
+  \item Integrated OpenAI \& Gemini APIs to automate extraction and validation of insurance and bid documents
+  \item Collaborated with general contractors to define requirements and rapidly iterate on dashboard features and user experience
+\end{itemize}
+
+\textbf{Software Engineer,} 1440 -- Salt Lake City, UT \hfill Sep 2023 -- Feb 2024 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Built a Flutter mobile app from scratch (Android \& iOS) to consolidate all Salesforce messaging channels including WhatsApp, Messenger, Twitter, Apple Messages, and SMS into a single feed
+  \item Developed and maintained GraphQL endpoints and REST integrations, writing complex SOQL queries to support real-time message sync across platforms
+  \item Implemented robust Provider-based state management and performance optimizations
+  \item Collaborated with stakeholders to define new APIs, prioritize features, and iterate on UX based on live user feedback
+\end{itemize}
+
+\textbf{Software Engineering Intern,} 1440 -- Salt Lake City, UT \hfill May 2023 -- Sep 2023 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Architected and implemented a cross-platform Flutter mobile app (Android \& iOS) from the ground up, integrating initial Salesforce API endpoints
+\end{itemize}
+
+\textbf{Software Engineering Intern,} Sorenson Communications -- Salt Lake City, UT \hfill May 2022 -- Aug 2022 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Built secure client login features for a Flutter-based patient portal web app
+  \item Developed accessible UI components for a Microsoft Teams React extension
+\end{itemize}
+
+% \textbf{Job Title,} \href{https://www.fstl1992.com/}{Company} -- City, ST \hfill XXXX -- XXXX \\
+% \vspace{-9pt}
+
+\vspace{-18.5pt}
+
+% education section
+\section*{Education}
+\textbf{University of Utah} -- Bachelor of Science in Computer Science \hfill 2020 -- 2023 \\
+Salt Lake City, UT \\
+Graduated with 3.65 GPA and Dean's List for 4 semesters. Concentrations in software engineering, web development and full-stack development.
+
+% projects section (commented out)
+% \section*{Projects}
+% \textbf{Project Title} \hfill \href{https://github.com/matiassingers/awesome-readme}{github.com/name/project} \\
+% \vspace{-9pt}
+% \begin{itemize}
+%   \item The more work experience you have, the less relevant outside-work projects tend to become
+%   \item If you have something that really stands out, consider listing it here
+% \end{itemize}
+
+% \textbf{Project Title} \hfill \href{https://mitcommlab.mit.edu/meche/commkit/portfolio/}{project.com} \\
+% \vspace{-9pt}
+% \begin{itemize}
+%   \item Only list real projects, not mandatory school projects or trivial tutorial projects found online 
+%   \item Something that someone uses to solve a problem
+%   \item Something that has users (can be just you, as long as you use it often) and is actively maintained and not just rotting in a GitHub repo, never to see a PR for the rest of its life
+% \end{itemize}
+
+% \textbf{Project Title} \hfill \href{https://www.hardwareishard.net/portfolio-database}{blog.com/projectname} \\
+% \vspace{-9pt}
+% \begin{itemize}
+%   \item Resume checklist: \url{https://old.reddit.com/r/EngineeringResumes/wiki/checklist}
+%   \item Google Docs version of this template: \url{https://docs.google.com/document/d/1MBvhATv8y-ESORopRoLSZ3f3HjkM_Qa_f8fIHAEqgnI/edit}
+% \end{itemize}
+
+% alternate formatting for projects section
+% \section*{Projects}
+% \begin{itemize}
+%   \item \textbf{QuantSoftware Toolkit:} Open source Python library for data analysis and machine learning for finance
+%   \item \textbf{GitHub Visualization:} Data visualization of Git Log data using D3 to analyze project trends over time
+%   \item \textbf{Recommendation System:} Music and movie recommender systems using collaborative filtering on public datasets
+%   \item \textbf{Mac Setup:} Book that gives step by step instructions on setting up developer environment on Mac OS
+% \end{itemize}
+
+\end{document}
